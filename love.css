@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: red;
+}
+
+.love{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 70vh;
+    font-size: 2rem;
+    color: black;
+    position: relative;
+    top: -175px;
+}
+
+span{
+    color: indigo;
+}
+
+.love ul{
+    list-style: none;
+    margin-left: 10px;
+    overflow: hidden;
+    height: 45px;
+}
+
+.love li{
+    position: relative;
+    margin-bottom: 10px;
+    position: relative;
+    top: 5px;
+    animation: slide 40s infinite steps(10);
+}
+
+@keyframes slide {
+    0%{
+        top: 5px;
+    }
+    100%{
+        top: -470px;
+    }
+}
+
+.love li::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    background-color: red;
+    border-left: #3c00a0 solid 3px;
+    position: absolute;
+    left: 0;
+    animation: line 2s infinite steps(15) alternate;
+}
+
+@keyframes line {
+    from{
+        left: 0;
+    }
+    to{
+        left: 100%;
+    }
+}
+
+.imgs{
+    background-image: url(love.css);
+    width: 20%;
+    height: 84vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    top: 115px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 100;
+    animation: change 40s infinite;
+}
+
+@keyframes change {
+    0%{
+        background-image: url(hager.jpeg);
+        background-size: contain;
+    }
+    10%{
+        background-image: url(hager.jpeg);
+        background-size: contain;
+    }
+    20%{
+        background-image: url(gamelty.jpeg);
+        background-size: contain;
+    }
+    30%{
+        background-image: url(hager7.jpeg);
+        background-size: contain;
+    }
+    40%{
+        background-image: url(mlbnty.jpeg);
+        background-size: contain;
+    }
+    50%{
+        background-image: url(heart.jpeg);
+        background-size: contain;
+        
+    }
+    60%{
+        background-image: url(mozty.jpeg);
+        background-size: contain;
+    }
+    70%{
+        background-image: url(hager5.jpeg);
+        background-size: contain;
+    }
+    80%{
+        background-image: url(hager4.jpeg);
+        background-size: contain;
+    }
+    90%{
+        background-image: url(omry.jpeg);
+        background-size: contain;
+    }
+    100%{
+        background-image: url(amerty.jpeg);
+        background-size: contain;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .imgs {
+        width: 55%;
+    }
+}
